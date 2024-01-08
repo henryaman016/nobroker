@@ -1,10 +1,7 @@
 package com.nobroker.entity;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,9 +12,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OwnerPlan {
-
     @Id
-    private long planId;
+    @Column(name = "plan_id")
+    private Long planId;
 
     @Column(name = "plan_name",unique = true)
     private String planName;
