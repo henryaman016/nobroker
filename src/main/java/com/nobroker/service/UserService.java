@@ -1,9 +1,23 @@
 package com.nobroker.service;
 
-import com.nobroker.payload.UserDto;
+import com.nobroker.entity.User;
+import com.nobroker.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public interface UserService {
+@Service
+public class UserService {
 
-    public long createUser(UserDto userDto);
+
+    @Autowired
+    private UserRepository userRepository;
+
+
+
+    public User registerUser(User user){
+
+        return userRepository.save(user);
+    }
+
 
 }
