@@ -14,7 +14,7 @@
 	<name>nobroker</name>
 	<description>Real Estate Project</description>
 	<properties>
-		<java.version>8</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -63,7 +63,11 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>4.1.1</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itextpdf</artifactId>
+			<version>5.5.13</version> <!-- Use the latest version available -->
+		</dependency>
 	</dependencies>
 
 	<build>
